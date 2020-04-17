@@ -1,5 +1,7 @@
 package es.fpdual.testing;
 
+import org.apache.commons.lang3.*;
+
 public class HolaMundo {
 
     private static String HOLA_MUNDO = "HOLA MUNDO";
@@ -14,12 +16,8 @@ public class HolaMundo {
         this.parametro = parametro;
     }
 
-    public String getHolaMundo() {
-        return "".equals(this.parametro) ? HOLA_MUNDO : HOLA_MUNDO + ": " + this.parametro;
-    }
-
-    public String getHolaMundo(String parametro1) {
-        return HOLA_MUNDO + ": " + parametro1;
+    public String getHolaMundo() throws ClassNotFoundException {
+        return StringUtils.isEmpty(this.parametro) ? HOLA_MUNDO : HOLA_MUNDO + ": " + this.parametro;
     }
 
 }

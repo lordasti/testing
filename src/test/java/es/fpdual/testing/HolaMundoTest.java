@@ -25,7 +25,20 @@ public class HolaMundoTest {
     public void deberiaRetornarConcatenadaLaCadenaPasadaPorParametro() throws Exception {
         final String parametro1 = "parametro1";
         final HolaMundo holaMundo = new HolaMundo(parametro1);
-
         assertThat(holaMundo.getHolaMundo(), is("HOLA MUNDO: parametro1"));
+    }
+
+    @Test
+    public void deberiaDevolverLaCadenaHolaMundoCuandoElParametroEsNulo() throws Exception {
+        // Incialización
+        final HolaMundo holaMundo = new HolaMundo(null);
+
+        // Entrenamiento
+
+        // Prueba
+        final String test = holaMundo.getHolaMundo();
+
+        // Comprobación
+        assertThat(test, is("HOLA MUNDO"));
     }
 }
