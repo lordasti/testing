@@ -11,16 +11,16 @@
         
     <bean id="testingDataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName">
-            <value>net.sourceforge.jtds.jdbc.Driver</value>
+            <value>oracle.jdbc.driver.OracleDriver</value>
         </property>
         <property name="url">
-            <value>${testing.sqlserver.url}</value>
+            <value>${testing.oracle.url}</value>
         </property>
         <property name="username">
-            <value>${testing.sqlserver.usuario}</value>
+            <value>${testing.oracle.usuario}</value>
         </property>
         <property name="password">
-            <value>${testing.sqlserver.password}</value>
+            <value>${testing.oracle.password}</value>
         </property>
     </bean>
 </beans>
